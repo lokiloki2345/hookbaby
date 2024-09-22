@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
+    <title>TapSwap</title>
+</head>
+<body>
+    <div id="sparkles-container"></div>
+    <div id="loadingScreen" class="loading-screen">
+        <img src="img/subimage.png" alt="Loading" class="loading-image">
+    </div>
+    
+    <div class="container lexend-container">
+        <div class="top-bar">
+            <!-- User button with image -->
+            <button id="voteButton" class="vote-button lexend-button">
+                <img src="img/user.png" alt="User" class="top-button-icon">
+                <span>NexaAirdrop</span>
+            </button>
+            <!-- Rank button with image -->
+            <button class="legendary-button lexend-button">
+                <img src="img/rank.png" alt="Rank" class="top-button-icon">
+                <span>Gold</span>
+            </button>
+        </div>
+        <div class="top-section">
+            <!-- Top section content -->
+        </div>
+        <!-- New text element added -->
+        <div class="balance-text">
+            <img src="img/subimage.png" alt="Icon" class="balance-icon">
+            <span id="balanceAmount">50078</span>
+        </div>
+        
+        <div class="bulb">
+            <img src="img/coin.png" alt="Coin" class="coin-image">
+        </div>
+        
+        <div class="farming-button-container">
+            <button id="startFarming" class="farming-button lexend-button">
+                <span id="farmingStatus">Start Farming</span>
+                <span id="farmingPoints" style="display: none;">0.000</span>
+            </button>
+        </div>
+        <div class="bottom-menu">
+            <!-- Farm button -->
+            <button id="farmButton" class="menu-btn lexend-button">
+                <img src="img/task.png" alt="Farm" class="menu-icon">
+            </button>
+
+            <!-- Invite button -->
+            <button id="inviteButton" class="menu-btn lexend-button">
+                <img src="img/farm.png" alt="Invite" class="menu-icon">
+            </button>
+
+            <!-- Task button -->
+            <button id="taskButton" class="menu-btn lexend-button">
+                <img src="img/invite.png" alt="Task" class="menu-icon">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

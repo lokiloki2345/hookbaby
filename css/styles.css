@@ -1,0 +1,391 @@
+/* General body styles */
+body {
+    background: linear-gradient(to bottom, #fbff000c, #ffffff);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Lexend font styles */
+.lexend-container {
+    font-family: 'Lexend', sans-serif;
+}
+
+.lexend-button {
+    font-weight: 600;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* General button styles to remove link-like effect */
+button {
+    outline: none;
+    border: none;
+    background: none;
+    -webkit-tap-highlight-color: transparent; /* Remove blue highlight on tap */
+}
+
+button:focus-visible {
+    outline: none; /* Remove blue focus outline */
+}
+
+button:active {
+    outline: none; /* Remove blue focus outline */
+    box-shadow: none; /* Remove box shadow */
+}
+
+/* Specific button styles */
+.vote-button,
+.legendary-button,
+.farming-button,
+.menu-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.vote-button:focus-visible,
+.legendary-button:focus-visible,
+.farming-button:focus-visible,
+.menu-btn:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.vote-button:active,
+.legendary-button:active,
+.farming-button:active,
+.menu-btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Sparkles styles */
+#sparkles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.sparkle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    animation: blink 1s infinite alternate, move-sparkle 5s infinite;
+    opacity: 0.6;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes move-sparkle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -30px);
+    }
+    50% {
+        transform: translate(-20px, 20px);
+    }
+    75% {
+        transform: translate(30px, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Loading screen styles */
+/* Loading screen styles */
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-image {
+    width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 480px) {
+    .loading-image {
+        width: 80px; /* Adjust size for smaller screens */
+    }
+}
+
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #fff;
+    border-top: 6px solid #512DA8;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main container styles */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    margin: 20px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.container.fade-in {
+    opacity: 1;
+}
+
+/* Top bar styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+}
+
+/* Vote and Legendary button styles */
+.vote-button, .legendary-button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add margin-top here */
+}
+
+.vote-button i, .legendary-button i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Top section styles */
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px 0;
+}
+
+/* Balance text styles */
+/* Balance text styles */
+.balance-text {
+    color: rgb(0, 0, 0); /* Text color */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 10px; /* Space between text and bulb */
+    text-align: center; /* Center align text */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center align items horizontally */
+}
+
+.balance-icon {
+    width: 24px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+#balanceAmount {
+    font-size: 24px; /* Match font size of the text */
+    font-weight: bold; /* Ensure text is bold */
+}
+
+
+/* Coin image styles */
+.bulb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0; /* Adjust margin as needed */
+    position: relative;
+}
+
+.coin-image {
+    width: 250px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for transformation */
+}
+
+/* Optional: Animation for coin image */
+.coin-image.mining {
+    animation: mining-animation 1.5s infinite;
+}
+
+@keyframes mining-animation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Farming button container styles */
+.farming-button-container {
+    margin-top: 10px; /* Decreased top margin for farming button */
+}
+
+/* Farming button styles */
+.farming-button {
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border: 1px solid #000000; /* Black border with 2px width */
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Farming status and points styles */
+#farmingStatus,
+#farmingPoints {
+    font-size: 18px; /* Ensure both have the same font size */
+    font-weight: bold;
+    display: inline-flex; /* Ensure both are displayed inline */
+    align-items: center; /* Align text vertically */
+}
+
+#farmingStatus {
+    margin-right: 5px; /* Add space between Farming text and points */
+}
+
+/* Bottom menu styles */
+.bottom-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Menu button styles */
+/* Menu button styles */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 40px; /* Set to match the size of the original icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.menu-btn span {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        top: 0;
+        left: 10px;
+        right: 10px;
+    }
+
+    .balance-text {
+        font-size: 25px; /* Adjust font size for smaller screens */
+        margin-bottom: 5px; /* Adjust margin for smaller screens */
+    }
+
+    .bulb {
+        margin: 5px auto 0; /* Decreased margin for the bulb image */
+    }
+
+    .farming-button-container {
+        margin-top: 5px; /* Decreased top margin for the farming button */
+    }
+
+    .farming-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .bottom-menu {
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+
+    .menu-btn span {
+        font-size: 12px;
+    }
+}
+
+.top-button-icon {
+    width: 28px; /* Increased size to match the original icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Adjust spacing as needed */
+}

@@ -1,0 +1,98 @@
+.lexend-container {
+    text-align: center;
+}
+
+.task-heading h1{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.task-heading p{
+
+    font-size: 15px; /* Smaller font size */
+    color: #333; /* Adjust color as needed */
+    margin-top: 6px; /* Space between heading and subheading */
+    padding: 0 20px; /* Add padding to left and right */
+}
+
+
+        /* Styles for the horizontal line */
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc; /* Color and thickness of the line */
+            margin: 20px 0; /* Space above and below the line */
+        }
+
+        /* Position the heading in the top-left corner with vertical offset */
+        .top-left-container {
+            position: absolute;
+            top: 20%; /* Vertical offset from the top */
+            left: 20px; /* Horizontal offset from the left */
+            text-align: left; /* Align text to the left */
+            margin-top: 30px; /* Adjust this value to increase space above the heading */
+            width: calc(100% - 40px); /* Ensure container takes full width minus padding */
+        }
+
+        /* Styles for the list of points */
+        .points-list {
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+        }
+
+        .points-list li {
+            position: relative;
+            padding-left: 25px; /* Space for the dot */
+            margin-bottom: 10px; /* Space between list items */
+            font-size: 16px; /* Adjust font size as needed */
+        }
+
+        .points-list li::before {
+            content: '•'; /* Unicode character for bullet */
+            position: absolute;
+            left: 0;
+            color: #000; /* Color of the bullet */
+            font-size: 20px; /* Adjust size of the bullet */
+        }
+
+        /* Additional style for the second horizontal line */
+        .top-left-container hr {
+            margin-top: 30px; /* Space above the line */
+        }
+
+        /* Styles for the button */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center button horizontally */
+            margin-top: 90px; /* Increase space above the button */
+        }
+
+        .button-container button {
+            background-color: transparent; /* No background color */
+            color: #000; /* Black text color */
+            border: 2px solid #000; /* Black border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px 40px; /* Increase padding for larger button and width */
+            font-size: 18px; /* Increase font size of the button text */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: border-color 0.3s, color 0.3s; /* Smooth border color and text color transition */
+        }
+
+        .button-container button:hover {
+            border-color: #0056b3; /* Darker border color on hover */
+            color: #0056b3; /* Darker text color on hover */
+        }
+
+        /* Styles for the friends heading */
+        .friends-heading {
+            margin-top: 50px; /* Space above the heading */
+            text-align: left; /* Align text to the left */
+            width: calc(100% - 40px); /* Ensure container takes full width minus padding */
+        }
+
+        .friends-heading h3 {
+            font-size: 24px; /* Font size for the heading */
+            color: #000; /* Text color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }

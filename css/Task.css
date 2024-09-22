@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* Styles for the subheading */
+.subheading {
+    font-size: 15px; /* Smaller font size */
+    color: #333; /* Adjust color as needed */
+    margin-top: 6px; /* Space between heading and subheading */
+    padding: 0 20px; /* Add padding to left and right */
+}
+
+/* Styles for the task heading container */
+.task-heading-container {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.task-heading {
+    font-weight: bold; /* Make the heading bold */
+}
+
+/* Styles for the task item */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Adjust padding */
+    width: 100%; /* Full width to align items */
+}
+
+.first-task-item {
+    margin-top: 40px; /* Increased margin top for the first task */
+}
+
+.task-item .task-info {
+    flex: 1;
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
+    text-align: left; /* Align text to the left */
+}
+
+.task-item .task-button {
+    margin-left: 20px;
+}
+
+.task-button button {
+    padding: 6px 12px; /* Reduced padding */
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+/* Removed hover effect */
+.task-button button:hover {
+    background-color: transparent;
+}
+
+/* Styling for the hr line */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0; /* Reduced margin between tasks */
+}
